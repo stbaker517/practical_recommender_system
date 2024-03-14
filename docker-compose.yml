@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  mysql:
+    image: mysql:latest
+    restart: unless-stopped
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: rec
+      MYSQL_USER: nickel
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"
+
+
